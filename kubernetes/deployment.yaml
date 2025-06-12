@@ -14,9 +14,11 @@ spec:
       labels:
         app: devsu-node-app
     spec:
+      imagePullSecrets:
+      - name: ghcr-secret
       containers:
       - name: devsu-node-app
-        image: devsu-node-app:latest
+        image: ghcr.io/robertnpa/devsu-node-app:latest
         ports:
         - containerPort: 3000
         envFrom:
