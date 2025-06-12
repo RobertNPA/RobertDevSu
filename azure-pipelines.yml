@@ -19,7 +19,7 @@ stages:
     steps:
     - script: |
         node -v
-        npm ci
+        npm install
       displayName: 'Install Dependencies'
 
     - script: |
