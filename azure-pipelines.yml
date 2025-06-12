@@ -23,8 +23,9 @@ stages:
       displayName: 'Install Dependencies'
 
     - script: |
-        npm run lint
+        npm run lint -- --max-warnings 0
       displayName: 'Run ESLint'
+      continueOnError: false
 
     - script: |
         npm test
