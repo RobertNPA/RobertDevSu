@@ -31,10 +31,7 @@ jobs:
       run: npm install
 
     - name: Run ESLint
-      run: |
-        npm run lint -- --fix || true
-        npm run lint -- --max-warnings 0
-      displayName: 'Run ESLint'
+      run: npm run lint
 
     - name: Run tests
       run: npm test

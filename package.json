@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test": "jest",
+    "dev": "nodemon index.js",
+    "test": "jest --coverage",
     "lint": "eslint ."
   },
   "jest": {
