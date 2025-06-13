@@ -81,13 +81,13 @@ jobs:
       with:
         version: 'latest'
 
-    - name: Create Kubernetes secret for GitHub Packages
+    - name: Create Kubernetes secret for GitHub Container Registry
       run: |
         kubectl create secret docker-registry ghcr-secret \
           --docker-server=ghcr.io \
-          --docker-username=robertnpa \
-          --docker-password=${{ secrets.GH_PACKAGES_TOKEN }} \
-          --docker-email=Robert28pg@gmail.com \
+          --docker-username=${{ github.actor }} \
+          --docker-password=${{ secrets.GITHUB_TOKEN }} \
+          --docker-email=${{ github.actor }}@users.noreply.github.com \
           --dry-run=client -o yaml | kubectl apply -f -
 
     - name: Apply Kubernetes manifests
