@@ -15,7 +15,7 @@ permissions:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: robertnpa/devsu-node-app
-  AWS_REGION: us-east-1
+  AWS_REGION: us-east-2
   EKS_CLUSTER_NAME: devsu-cluster
   KUBERNETES_VERSION: "1.30"
 
